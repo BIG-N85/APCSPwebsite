@@ -1,41 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>AP CSP First Website</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      
+<head>
+    <title>AP CSP First Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
-    
-    <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">WebSiteName</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li class ="active"><a href="bio.html">Bio</a></li>
-          <li><a href="page.html">Page 2</a></li>
-        </ul>
-        <form class="navbar-form navbar-left" action="/action_page.php">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search" name="search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="https://codehs.com/uploads/245f87744f92b34b6a640a0d89ed0a89">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="menu">
+
+        <a href="index.html" class="active">
+            <span style="font-size: 24px">🏡</span>
+            <span>Home</span>
+        </a>
+
+        <a href="bio.html">
+            <span style="font-size: 24px">👤</span>
+            <span>Bio</span>
+        </a>
+
+        <a href="page.html">
+            <span style="font-size: 24px">🚀</span>
+            <span>Projects</span>
+        </a>
+
+        <a href="settings.html">
+            <span style="font-size: 24px">⚙️</span>
+            <span>Settings</span>
+        </a>
+
     </nav>
-    
-    <div class="container">
-      <h3>About Me</h3>
-      <p></p>
-    </div>
-    
 
-    </body>
+
+ 
+    <section class="parallax-container">
+
+        <video autoplay muted loop playsinline class="bg-video">
+            <source
+                src="https://codehs.com/uploads/2497e238e6005f288401cde1930c427b"
+                type="video/mp4">
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="hero-content">
+            <h1>Welcome to My Website</h1>
+            <p>My AP CSP Website</p>
+        </div>
+
+    </section>
+
+
+        <!-- CONTENT -->
+        <section class="content-section">
+    
+            <h2>About This Website</h2>
+    
+            <p>
+                Welcome to my website! This site was created for AP Computer
+                Science Principles.
+            </p>
+    
+        </section>
+    
+   <section class="parallax-container">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="https://codehs.com" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="hero-content">
+            <h1>Another Section</h1>
+        </div>
+    </section>
+    
+   
+    <div class="f1-track-zone">
+        <div class="f1-tow-group" id="f1TowGroup">
+            <div class="f1-racing-car">🏎️</div>
+            <footer class="site-footer">
+                <p> 
+                <a href ="mailto:rook15knight@gmail.com">Contact Me</a>
+                <a href = "https://granadahigh.livermoreschools.org/">Granada High School</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+ 
+    <script>
+      const trackZone = document.querySelector('.f1-track-zone');
+      const towGroup = document.getElementById('f1TowGroup');
+      let animationTriggered = false;
+    
+      window.addEventListener('scroll', () => {
+        if (animationTriggered) return;
+    
+        const trackPosition = trackZone.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+    
+    
+        if (trackPosition < screenHeight) {
+          animationTriggered = true;
+          
+          towGroup.classList.add('f1-drive-active');
+        }
+      });
+    </script>
+          
+
+        
+
+
+
+
+</body>
 </html>
