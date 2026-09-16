@@ -1,40 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>AP CSP First Website</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
-    
-    <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand">WebSiteName</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bio.html">Bio</a></li>
-          <li class="active"><a href="page.html">Page 2</a></li>
-        </ul>
-        <form class="navbar-form navbar-left" action="/action_page.php">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search" name="search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div>
+
+<head>
+
+    <title>My Projects</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+    <nav class="menu">
+
+        <a href="index.html">
+            <span style="font-size: 24px">🏡</span>
+            <span>Home</span>
+        </a>
+
+        <a href="bio.html">
+            <span style="font-size: 24px">👤</span>
+            <span>Bio</span>
+        </a>
+
+        <a href="page.html" class="active">
+            <span style="font-size: 24px">🚀</span>
+            <span>Projects</span>
+        </a>
+
+        <a href="settings.html">
+            <span style="font-size: 24px">⚙️</span>
+            <span>Settings</span>
+        </a>
+        
+        
+        
+
     </nav>
+
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+
+        <div>
+
+            <h1>My Projects</h1>
+
+            <p>
+                Things I'm learning, building, and working toward.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section class="projects">
+
+        <h2>Projects</h2>
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    ✈️
+                </div>
+
+                <h3>Aerospace Engineering</h3>
+
+                <p>
+                    I am interested in aerospace engineering and learning
+                    how aircraft and spacecraft are designed.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    💻
+                </div>
+
+                <h3>Computer Science</h3>
+
+                <p>
+                    I am learning programming and web development through
+                    AP Computer Science Principles.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🚀
+                </div>
+
+                <h3>Future Projects</h3>
+
+                <p>
+                    I want to build engineering projects that combine
+                    programming, physics, mathematics, and design.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="parallax-container">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="https://codehs.com" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="hero-content">
+            <h1>Another Section</h1>
+        </div>
+    </section>
     
-    <div class="container">
-      <h3>Page</h3>
-      <p></p>
+   
+    <div class="f1-track-zone">
+        <div class="f1-tow-group" id="f1TowGroup">
+            <div class="f1-racing-car">🏎️</div>
+            <footer class="site-footer">
+                <p> 
+                <a href ="mailto:rook15knight@gmail.com">Contact Me</a>
+                <a href = "https://granadahigh.livermoreschools.org/">Granada High School</a>
+                </p>
+            </footer>
+        </div>
     </div>
+
+ 
+    <script>
+      const trackZone = document.querySelector('.f1-track-zone');
+      const towGroup = document.getElementById('f1TowGroup');
+      let animationTriggered = false;
+    
+      window.addEventListener('scroll', () => {
+        if (animationTriggered) return;
+    
+        const trackPosition = trackZone.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
     
     
-    
-    </body>
+        if (trackPosition < screenHeight) {
+          animationTriggered = true;
+          
+          towGroup.classList.add('f1-drive-active');
+        }
+      });
+    </script>
+
+
+</body>
 </html>
