@@ -842,7 +842,16 @@ button:active {
   justify-content: center;
   align-items: center;
   color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
+.glass-link:hover .glass::before {
+    background: rgba(0, 122, 255, 0.25);
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .container .glass svg {
   font-size: 2.5em;
   fill: #fff;
@@ -945,3 +954,4 @@ button:active {
     font-style: italic;
     margin: 0;
 }
+
