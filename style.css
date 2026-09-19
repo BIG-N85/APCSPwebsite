@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+
 
 
 :root {
@@ -562,111 +568,381 @@ body {
 }
 
  body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Prevents horizontal scrollbars during animation */
-            background-color: #111;
-            color: white;
-        }
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scrollbars during animation */
+    background-color: #111;
+    color: white;
+}
 
         /* Your Parallax Video Section */
-        .parallax-container {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-        .bg-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: translate(-50%, -50%);
-            z-index: -2;
-        }
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
 
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -1;
-        }
+ .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
 
-        .hero-content h1 {
-            font-size: 3rem;
-            text-transform: uppercase;
-        }
+  .hero-content h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
 
         /* --- 🏎️ HORIZONTAL DRAG ANIMATION CSS --- */
         
         /* The area that triggers the scroll effect */
-        .f1-track-zone {
-            position: relative;
-            height: 120px; /* Tall enough to fit the car and footer neatly */
-            background: #222;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
+.f1-track-zone {
+    position: relative;
+    height: 120px; /* Tall enough to fit the car and footer neatly */
+    background: #222;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
 
         /* The container holding both the car and footer side-by-side */
-        .f1-tow-group {
-            display: flex;
-            align-items: center;
-            width: max-content; /* Keeps them in a single straight line */
-            position: absolute;
-            right: 0;
+.f1-tow-group {
+    display: flex;
+    align-items: center;
+    width: max-content; /* Keeps them in a single straight line */
+    position: absolute;
+    right: 0;
             
             /* Start hidden completely off-screen to the left */
             /* -100% moves the footer and car out of view */
-            transform: translateX(100%); 
+    transform: translateX(100%); 
             
-            /* Smooth driving/pulling effect */
-            transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1); 
+            
+    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1); 
         }
 
         /* When active, the car drives out to the desired position */
         /* Adjust the percentage to control how far onto the screen they stop */
-        .f1-tow-group.f1-drive-active {
-            transform: translateX(0%); 
-        }
+.f1-tow-group.f1-drive-active {
+    transform: translateX(0%); 
+}
 
         /* The racing car leading the pack */
         /* Since it moves left-to-right, we use order: 2 to put it in front */
-        .f1-racing-car {
-            font-size: 3rem;
-            order: 1; 
-            margin-right: 10px; /* Creates a small gap between the car and the footer */
-        }
+.f1-racing-car {
+    font-size: 3rem;
+    order: 1; 
+    margin-right: 10px; /* Creates a small gap between the car and the footer */
+}
 
         /* The footer being dragged behind the car */
-        .site-footer {
-            order: 2; /* Puts the footer behind the car */
-            background-color: #ff1801; /* F1 Red */
-            color: white;
-            padding: 15px 30px;
-            border-radius: 4px;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+.site-footer {
+    order: 2; /* Puts the footer behind the car */
+    background-color: #ff1801; /* F1 Red */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
         }
 
-        .site-footer p {
-            margin: 0;
-            font-weight: bold;
-            font-size: 1.2rem;
-            white-space: nowrap; /* Keeps the text on one line */
-            color: white;
-        }
+.site-footer p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    white-space: nowrap; /* Keeps the text on one line */
+    color: white;
+}
         
-        .site-footer a {
-            color: white;
-            text-decoration: underline;
-            margin-right: 20px;
-        }
+.site-footer a {
+    color: white;
+    text-decoration: underline;
+    margin-right: 20px;
+}
+        
+.parallax-container {
+    min-height: 500px; 
+    position: relative;
+    
+    background-image: url("https://codehs.com/uploads/b738db573711b87b618a3c63c00d8b3c");
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.profile-photo {
+    width: 240px; 
+    height: 240px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid rgba(255, 255, 255, 0.6); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+    margin-bottom: 20px;
+
+}
+
+
+button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+/* 1. Center the section heading */
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 2. Center the entire layout grid on the screen */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;         /* Allows cards to wrap to a new row on small screens */
+  justify-content: center; /* Horizontally centers the cards on the page */
+  gap: 30px;               /* Creates equal spacing between all cards */
+  max-width: 1200px;       /* Limits grid width on wide desktop screens */
+  margin: 0 auto;          /* Centers the entire container itself on the page */
+  padding: 20px;
+}
+
+/* 3. Center the icon and button inside each card */
+.project-card {
+  display: flex;
+  flex-direction: column;  /* Places the icon on top of the button */
+  align-items: center;     /* Centers the icon and button horizontally */
+  gap: 15px;               /* Adds breathing room between the icon and button */
+}
+
+/* 4. Center the project icons themselves */
+.project-icon {
+  font-size: 5rem;         /* Makes emojis look clean and visible */
+  text-align: center;
+}
+
+/* From Uiverse.io by codebykay101 */ 
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.container .glass {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 10px;
+}
+
+.container .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.container .glass svg {
+  font-size: 2.5em;
+  fill: #fff;
+}
+
+.glass-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.glass-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: #111;
+}
+
+.glass-icon {
+    width: 10em;
+    height: 10em;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.project-jumplinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.project-jumplinks a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-jumplinks a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.project-card {
+    scroll-margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin: 20px 0 10px;
+}
+
+.project-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 2px dashed rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover .project-frame {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.project-frame-icon {
+    font-size: 40px;
+    opacity: 0.6;
+}
+
+.project-frame-label {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.project-caption {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    margin: 0;
+}
+
