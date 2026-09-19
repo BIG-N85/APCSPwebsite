@@ -38,14 +38,6 @@
             <span>Projects</span>
         </a>
 
-        <a href="settings.html">
-            <span style="font-size: 24px">⚙️</span>
-            <span>Settings</span>
-        </a>
-        
-        
-        
-
     </nav>
 
 
@@ -72,59 +64,103 @@
 
         <h2>Projects</h2>
 
+        <nav class="project-jumplinks">
+            <a href="#project-1">Project 1</a>
+            <a href="#project-2">Project 2</a>
+            <a href="#project-3">Project 3</a>
+            <a href="#project-4">Project 4</a>
+            <a href="#project-5">Project 5</a>
+        </nav>
+
 
         <div class="project-grid">
 
 
             <!-- PROJECT 1 -->
+            <div class="project-card" id="project-1">
 
-            <div class="project-card">
-
-                <div class="project-icon">
-                    ✈️
+                <div class="project-frame">
+                    <span class="project-frame-icon">🧪</span>
+                    <span class="project-frame-label">Coming Soon</span>
                 </div>
 
-                <h3>Aerospace Engineering</h3>
+                <h3>Project 1</h3>
 
-                <p>
-                    I am interested in aerospace engineering and learning
-                    how aircraft and spacecraft are designed.
+                <p class="project-caption">
+                    Description - Project still in R&D. 
+                    Come Back Later.
                 </p>
 
             </div>
 
 
             <!-- PROJECT 2 -->
+            <div class="project-card" id="project-2">
 
-            <div class="project-card">
-
-                <div class="project-icon">
-                    💻
+                <div class="project-frame">
+                    <span class="project-frame-icon">🔧</span>
+                    <span class="project-frame-label">Coming Soon</span>
                 </div>
 
-                <h3>Computer Science</h3>
+                <h3>Project 2</h3>
 
-                <p>
-                    I am learning programming and web development through
-                    AP Computer Science Principles.
+                <p class="project-caption">
+                    Description - Project still in R&D. 
+                    Come Back Later.
                 </p>
 
             </div>
 
 
             <!-- PROJECT 3 -->
+            <div class="project-card" id="project-3">
 
-            <div class="project-card">
-
-                <div class="project-icon">
-                    🚀
+                <div class="project-frame">
+                    <span class="project-frame-icon">🔬</span>
+                    <span class="project-frame-label">Coming Soon</span>
                 </div>
 
-                <h3>Future Projects</h3>
+                <h3>Project 3</h3>
 
-                <p>
-                    I want to build engineering projects that combine
-                    programming, physics, mathematics, and design.
+                <p class="project-caption">
+                    Description - Project still in R&D. 
+                    Come Back Later.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+            <div class="project-card" id="project-4">
+
+                <div class="project-frame">
+                    <span class="project-frame-icon">🥽</span>
+                    <span class="project-frame-label">Coming Soon</span>
+                </div>
+
+                <h3>Project 4</h3>
+
+                <p class="project-caption">
+                    Description - Project still in R&D. 
+                    Come Back Later.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT 5 -->
+            <div class="project-card" id="project-5">
+
+                <div class="project-frame">
+                    <span class="project-frame-icon">🔭</span>
+                    <span class="project-frame-label">Coming Soon</span>
+                </div>
+
+                <h3>Project 5</h3>
+
+                <p class="project-caption">
+                    Description - Project still in R&D. 
+                    Come Back Later.
                 </p>
 
             </div>
@@ -134,17 +170,7 @@
 
     </section>
 
-    <section class="parallax-container">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="https://codehs.com" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-        <div class="hero-content">
-            <h1>Another Section</h1>
-        </div>
-    </section>
-    
-   
+
     <div class="f1-track-zone">
         <div class="f1-tow-group" id="f1TowGroup">
             <div class="f1-racing-car">🏎️</div>
@@ -157,8 +183,9 @@
         </div>
     </div>
 
- 
+
     <script>
+    
       const trackZone = document.querySelector('.f1-track-zone');
       const towGroup = document.getElementById('f1TowGroup');
       let animationTriggered = false;
@@ -177,7 +204,6 @@
         }
       });
     </script>
-
 
 </body>
 </html>
