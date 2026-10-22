@@ -19,6 +19,9 @@
 
     <link rel="stylesheet"
           href="style.css">
+   
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 
 </head>
 
@@ -80,22 +83,21 @@
         <div class="project-grid">
 
 
-            <!-- PROJECT 1 -->
-            <div class="project-card" id="project-1">
-
-                <div class="project-frame">
-                    <iframe src="https://app.pickcode.io/share/cmvahwuzz2aj310ynno7y60pw" width="100%" height="600px" style="border:none;"></iframe>
-
-                </div>
-
-                <h3>Project 1</h3>
-
-                <p class="project-caption">
-                    Description - Project still in R&D. 
-                    Come Back Later.
-                </p>
-
+        <!-- PROJECT 1 -->
+        <div class="project-card" id="project-1">
+        
+            <div class="project-frame" style="height: 600px; background-color: #0d1117; text-align: left; padding: 15px; overflow-y: auto;">
+                <!-- Loads main.py directly from your GitHub repository -->
+                <script type="py" src="./main.py" config='{"terminal": true}'></script>
             </div>
+        
+            <h3>Project 1: The Corporate Breach</h3>
+        
+            <p class="project-caption">
+                An 8-stage branching terminal text adventure game built in Python.
+            </p>
+        
+        </div>
 
 
             <!-- PROJECT 2 -->
